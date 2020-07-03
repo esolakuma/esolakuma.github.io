@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<body>
+	<head>
+		<meta charset="utf-8">
+		<title>陶芸作品｜熊倉龍一　陶芸家｜公式</title>
+		<link rel="stylesheet" href="reset.css">
+		<link rel="stylesheet" href="style3.css">
+	</head>
+	<div id="wrapper">
+			<nav id="gNav">
+				<ul>
+				    <li><a href="HOME.html">HOME</a></li>
+					<li><a href="ARTIST.html">ARTIST</a></li>
+					<li><a href="WORKS.html">WORKS</a></li>
+					<li><a href=">NEWS.html">NEWS</a></li>
+					<li><a href="CONTACT.html">CONTACT</a></li>
+				</ul>
+			</nav>
+</div>
+<div class="my-slider" id="my-slider">
+		<div class="sp-slides">
+			<div class="sp-slide">
+				<img class="sp-image" src="images/about.jpg" data-small="images/about.jpg">
+			</div>
+			<div class="sp-slide">
+				<img class="sp-image" src="images/練込5.jpg" data-small="images/練込5.jpg">
+			</div>
+		</div>
+	</div>
+<section class="about" id="about">
+<h2 class="heading">ABOUT</h2>
+</section>
+
+<section>
+	<div class="biz1">
+	<img class="photoframe" src="images/仮.jpg"alt="陶芸4">
+</div>
+<p class="about-text">
+	「日常の食卓に彩りを」をテーマに作っています。<br>また、使っていない時も見て
+	明るい気持ちになるものや楽しめるものを目指して日々制作しています。<br>
+	よく見るとここにも他の色が隠れている、この模様〇〇みたいだねなど、
+	コミュニケーションの一端を担って頂けれたら嬉しいです。<br>
+	最新作品や試作品の画像をインスタグラムであげているので良かったらそちらもご覧ください。
+</p>
+
+<section class="about1" id="about1">
+<h2 class="heading">instagram</h2>
+</section>
+
+
+
+
+<!-- SnapWidget -->
+<div class=instagram>
+<iframe src="https://snapwidget.com/embed/832908" class="snapwidget-widget" allowtransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:960px; height:370px"></iframe>
+</div>
+</section>
+
+<section class="about" id="about">
+<h2 class="heading">MENU</h2>
+
+<div class="menu">
+<a href="ARTIST.html"> <img src="images/テーブルウェア.jpg"></a>
+<a href="WORKS.html"><img src="images/黒青リム.jpg"></a>
+<a href="NEWS.html"><img src="images/萩.jpg"></a>
+<a href="CONTACT.html"><img src="images/ぐい吞み（青緑）.jpg"></a>
+</div>
+<div class="menu1">
+<a href="ARTIST.html"><p>ARTIST</p></a><a href="WORKS.html"><p>WORKS</p></a><a href="NEWS.html"><p>NEWS</p></a><a href="CONTACT.html"><p>CONTACT</p></a>
+</div> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/jquery.sliderPro.min.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+
+    	// スライドショーのスクリプト
+        $( '#my-slider' ).sliderPro({
+            fade: false, // フェードアウトにする
+            buttons: false, // ボタンを非表示
+            width: "960px", // 幅を100%に
+            autoHeight: true, // 高さを画像の縦横比に合わせる
+            fadeDuration: 13000, // フェードの時間を8秒に
+            autoplayOnHover: 'none', // マウスをスライドにホバーしたときも何もしない
+            autoplayDelay: 15000, // スライドを9秒で交替
+            heightAnimationDuration: 0, // 高さのアニメーションの時間を0
+            touchSwipe: false, // スマホでスワイプに対応させない
+        });
+
+		// トップに戻るボタンを途中から表示して、スムーズスクロール
+		var topBtn = $( '.totop' );
+		//ボタンを非表示にする
+		topBtn.hide();
+		//スクロールしてページトップから100に達したらボタンを表示
+		$(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				//フェードインで表示
+				topBtn.fadeIn();
+			} else {
+				//フェードアウトで非表示
+				topBtn.fadeOut();
+			}
+		});
+		//スクロールしてトップへ戻る
+		topBtn.click(function () {
+			$( 'body,html' ).animate({
+				scrollTop: 0
+			}, 500);
+			return false;
+		});
+
+	});
+</script>
+</body>
+</html>
